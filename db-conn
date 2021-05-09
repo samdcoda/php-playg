@@ -1,0 +1,12 @@
+<?php
+$conn=@mysqli_connect('localhost', 'root', 'dbname');
+  if (!$conn)
+    {
+    exit("connection error");
+    }
+  else
+    {
+    echo "DB connected";
+    }
+  mysqli_close($conn);
+  ?>
