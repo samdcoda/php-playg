@@ -1,5 +1,30 @@
+// display content from db in table
+//ad button to add value to db from input
+
+<!doctype html>
+<html>
+<head>
+<title> Test db connection </title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<section id="kontener">
+<section id="baner">
+Text
+</section>
+<section id="prawy">
+
 <?php
 $conn=@mysqli_connect('localhost', 'root', 'dbname');
+$q1=mysqli_query($conn, 'select * from dbname');
+echo "<p>Text</p>";
+while ($row=mysqli_fetch_array($z1))
+{
+echo "<b>".$row['Name'].'</b>, '.$row['Miasto'].','.$row['Address'].'<br>';
+}
+
+
   if (!$conn)
     {
     exit("connection error");
@@ -10,3 +35,4 @@ $conn=@mysqli_connect('localhost', 'root', 'dbname');
     }
   mysqli_close($conn);
   ?>
+
