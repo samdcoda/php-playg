@@ -35,4 +35,9 @@ echo "<b>".$row['Name'].'</b>, '.$row['Miasto'].','.$row['Address'].'<br>';
     }
   mysqli_close($conn);
   ?>
-
+</section>
+<section id="galery">
+</section>
+</section>
+</body>
+</html>
