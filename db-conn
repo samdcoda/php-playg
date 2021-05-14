@@ -16,28 +16,31 @@ Text
 <section id="prawy">
 
 <?php
-$conn=@mysqli_connect('localhost', 'root', 'dbname');
-$q1=mysqli_query($conn, 'select * from dbname');
-echo "<p>Text</p>";
-while ($row=mysqli_fetch_array($z1))
-{
-echo "<b>".$row['Name'].'</b>, '.$row['Miasto'].','.$row['Address'].'<br>';
-//Comment
-/*comment
-comment*/
-#comment
-}
-
-
-  if (!$conn)
-    {
-    exit("connection error");
-    }
-  else
-    {
-    echo "DB connected";
-    }
-  mysqli_close($conn);
+    //Comment
+    /*comment
+    comment*/
+    #comment
+    
+    $conn=@mysqli_connect('localhost', 'root', 'dbname');
+    $q1=mysqli_query($conn, 'select * from dbname');
+    echo "<p>Text</p>";
+      
+      while ($row=mysqli_fetch_array($q1))
+      
+      {
+      echo "<b>".$row['Name'].'</b>, '.$row['Miasto'].','.$row['Address'].'<br>';
+      }
+        
+        if (!$conn)
+          {
+          exit("connection error");
+          }
+        else
+          {
+          echo "DB connected";
+          }
+        
+        mysqli_close($conn);
   ?>
 </section>
 <section id="galery">
